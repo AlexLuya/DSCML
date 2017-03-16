@@ -21,8 +21,8 @@ args = vars(ap.parse_args())
 # ball in the HSV color space
 # greenLower = (29, 86, 6)
 # greenUpper = (64, 255, 255)
-greenUpper = (300, 0,50 )
-greenLower = (50, 128, 255)
+greenLower = (150, 0, 50)
+greenUpper = (25, 128,255 )
 
 # initialize the list of tracked points, the frame counter,
 # and the coordinate deltas
