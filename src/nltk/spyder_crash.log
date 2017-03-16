@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/alex/Software/spyder/spyderlib/app/spyder.py", line 3140, in main
+    mainwindow = run_spyder(app, options, args)
+  File "/home/alex/Software/spyder/spyderlib/app/spyder.py", line 3026, in run_spyder
+    main.setup()
+  File "/home/alex/Software/spyder/spyderlib/app/spyder.py", line 840, in setup
+    from spyderlib.plugins.help import Help
+  File "/home/alex/Software/spyder/spyderlib/plugins/help.py", line 32, in <module>
+    from spyderlib.utils.help.sphinxify import (CSS_PATH, generate_context,
+  File "/home/alex/Software/spyder/spyderlib/utils/help/sphinxify.py", line 31, in <module>
+    import sphinx
+ImportError: No module named sphinx
