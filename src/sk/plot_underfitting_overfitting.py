@@ -1,4 +1,4 @@
 # -*- coding:utf8 -*-
 
 import numpy as np
-import sklearn.model_select import valid
+from sklearn.model_select import valid

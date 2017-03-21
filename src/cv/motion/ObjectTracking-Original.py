@@ -21,8 +21,11 @@ args = vars(ap.parse_args())
 # ball in the HSV color space
 # greenLower = (29, 86, 6)
 # greenUpper = (64, 255, 255)
-greenLower = (150, 0, 50)
-greenUpper = (25, 128,255 )
+greenLower1 = (0, 0, 20)         
+greenUpper1 = (50, 128, 100)     
+
+greenLower2 = (300, 0, 20)         
+greenUpper2 = (359, 128, 100)     
 
 # initialize the list of tracked points, the frame counter,
 # and the coordinate deltas
@@ -35,7 +38,6 @@ direction = ""
 # to the webcam
 if not args.get("video", False):
 	camera = cv2.VideoCapture(0)
-
 # otherwise, grab a reference to the video file
 else:
 	camera = cv2.VideoCapture(args["video"])
@@ -59,7 +61,10 @@ while True:
 	# construct a mask for the color "green", then perform
 	# a series of dilations and erosions to remove any small
 	# blobs left in the mask
-	mask = cv2.inRange(hsv, greenLower, greenUpper)
+# 	mask = cv2.inRange(hsv, greenLower, greenUpper)
+	mask1 = cv2.inRange(hsv, greenLower1, greenUpper1)
+	mask2 = cv2.inRange(hsv, greenLower2, greenUpper2)
+	mask = cv2.max(mask1, mask2)
 	mask = cv2.erode(mask, None, iterations=2)
 	mask = cv2.dilate(mask, None, iterations=2)
 

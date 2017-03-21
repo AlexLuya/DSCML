@@ -1,5 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/EssentialBasicFunctionality.py=utf-8
 encoding//src/cv/FaceAndEyeDetector.py=utf-8
+encoding//src/cv/VideoCapture.py=utf-8
 encoding//src/kaggle/tantic/PredictMissingAges.py=utf-8
 encoding//src/kaggle/tantic/tantic.py=utf-8
+encoding//src/sk/plot_underfitting_overfitting.py=utf8
+encoding//src/test/CaptureVideoFromCamera.py=utf-8
