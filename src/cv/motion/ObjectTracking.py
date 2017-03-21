@@ -73,9 +73,11 @@ while True:
 	cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL,
 		cv2.CHAIN_APPROX_SIMPLE)[-2]
 
-	cv2.drawContours(frame, cnts, -1, (0, 255, 255), 2)
+	biggest = max(cnts, key=cv2.contourArea)
+	cv2.drawContours(frame, [biggest], -1, (0, 255, 255), 2)
 	
-	cv2.imshow("Frame", frame)
+# 	cv2.imshow("HSV", hsv)
+	cv2.imshow("Contours", frame)
 	key = cv2.waitKey(1) & 0xFF
 
 	# if the 'q' key is pressed, stop the loop
